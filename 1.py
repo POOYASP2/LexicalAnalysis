@@ -1,13 +1,12 @@
-req = str(input("Please Enter Reg The Last Char is $ \n"))
+req = str(input("Please Enter a String The Last Char is $ \n"))
 req =req.replace(" ", "")
 req = list(req)
 token = []
-sreq = []
-summ = 0
-counter = 0 
-def digit():
-    global counter  
-    global summ
+
+def digit(req):
+    counter = 0
+    summ = 0 
+    sreq = []
     while counter < len(req):
         if(req[counter].isdigit() == True):
             for j in range(counter , len(req)):
@@ -17,11 +16,12 @@ def digit():
                 else:
                     sreq.append(summ)
                     counter = j - 1 
+                    summ = 0
                     break
         else:
             sreq.append(req[counter])
         counter = counter + 1 
-digit()
+    return sreq
 def dfa(req):
     if(isinstance(req[0],int)):
         token.append(["Numbers", req[0]])
@@ -39,25 +39,25 @@ def dfa(req):
         token.append(["then","then"])
         return 4
     elif(req[0]=="*"):
-        token.append(["Operators", "*"])
+        token.append(["Aop", "*"])
         return 1
     elif(req[0]=="+"):
-        token.append(["Operators", "+"])
+        token.append(["Aop", "+"])
         return 1
     elif(req[0]==">"):
-        token.append(["Operators", ">"])
+        token.append(["Cop", ">"])
         return 1
     elif(req[0]=="<"):
-        token.append(["Operators", "<"])
+        token.append(["Cop", "<"])
         return 1
     elif(req[0]=="="):
-        token.append(["Operators", "="])
+        token.append(["=", "="])
         return 1
     elif(req[0]=="$"):
-        token.append(["Operators", "$"])
+        token.append(["$", "$"])
         return 1
     else:
-        token.append(["identifier",req[0]])
+        token.append(["Variable",req[0]])
         return 1
 
 def lexicalAnalysis(req):
@@ -67,8 +67,9 @@ def lexicalAnalysis(req):
         print("\n is okie")
     else:
         lexicalAnalysis(req)
-print(sreq)
-lexicalAnalysis(sreq)
+
+lexicalAnalysis(digit(req))
+print(digit(req))
 print(token)
 # Work with File ...
 f = open("table.txt" , "w+")
