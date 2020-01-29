@@ -1,6 +1,6 @@
 # LexicalAnalysis
-A simple LexicalAnalysis(space)
-Input Example :(space)
-if a>b a=23+3 $(space)
-Output :(space)
+A simple LexicalAnalysis<br/>
+Input Example :<br/>
+if a>b a=23+3 $<br/>
+Output :<br/>
 [['if', 'if'], ['Variable', 'a'], ['Cop', '>'], ['Variable', 'b'], ['Variable', 'a'], ['=', '='], ['Numbers', 23], ['Aop', '+'], ['Numbers', 3], ['$', '$']]
