@@ -22,6 +22,7 @@ def digit(req):
             sreq.append(req[counter])
         counter = counter + 1 
     return sreq
+
 def dfa(req):
     if(isinstance(req[0],int)):
         token.append(["Numbers", req[0]])
@@ -69,8 +70,6 @@ def lexicalAnalysis(req):
         lexicalAnalysis(req)
 
 lexicalAnalysis(digit(req))
-print(digit(req))
-print(token)
 # Work with File ...
 f = open("table.txt" , "w+")
 f.write(str(token))
