@@ -22,7 +22,6 @@ def digit(req):
             sreq.append(req[counter])
         counter = counter + 1 
     return sreq
-
 def dfa(req):
     if(isinstance(req[0],int)):
         token.append(["Numbers", req[0]])
@@ -40,16 +39,16 @@ def dfa(req):
         token.append(["then","then"])
         return 4
     elif(req[0]=="*"):
-        token.append(["Aop", "*"])
+        token.append(["*", "*"])
         return 1
     elif(req[0]=="+"):
-        token.append(["Aop", "+"])
+        token.append(["+", "+"])
         return 1
     elif(req[0]==">"):
-        token.append(["Cop", ">"])
+        token.append([">", ">"])
         return 1
     elif(req[0]=="<"):
-        token.append(["Cop", "<"])
+        token.append(["<", "<"])
         return 1
     elif(req[0]=="="):
         token.append(["=", "="])
