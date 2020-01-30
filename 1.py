@@ -24,7 +24,7 @@ def digit(req):
     return sreq
 def dfa(req):
     if(isinstance(req[0],int)):
-        token.append(["Numbers", req[0]])
+        token.append(["num", req[0]])
         return 1
     elif(req[0]=="i" and req[1]=="f"):
         token.append(["if","if"])
@@ -57,7 +57,7 @@ def dfa(req):
         token.append(["$", "$"])
         return 1
     else:
-        token.append(["Variable",req[0]])
+        token.append(["var",req[0]])
         return 1
 
 def lexicalAnalysis(req):
