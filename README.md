@@ -62,40 +62,40 @@ print(digit(req))
 ```python
 def dfa(req):
     if(isinstance(req[0],int)):
-        token.append(["Numbers", req[0]])
+        token.append(["num", req[0]])
         return 1
     elif(req[0]=="i" and req[1]=="f"):
-        token.append(["if","if"])
+        token.append(["if","keyword"])
         return 2
     elif(req[0]=="w" and req[1]=="h" and req[2]=="i" and req[3]=="l" and req[4]=="e"):
-        token.append(["while","while"])
+        token.append(["while","keyword"])
         return 5
     elif(req[0]=="e" and req[1]=="l" and req[2]=="s" and req[3]=="e"):
-        token.append(["else","else"])
+        token.append(["else","keyword"])
         return 4
     elif(req[0]=="t" and req[1]=="h" and req[2]=="e" and req[3]=="n"):
-        token.append(["then","then"])
+        token.append(["then","keyword"])
         return 4
     elif(req[0]=="*"):
-        token.append(["Aop", "*"])
+        token.append(["*", "Operators"])
         return 1
     elif(req[0]=="+"):
-        token.append(["Aop", "+"])
+        token.append(["+", "Operators"])
         return 1
     elif(req[0]==">"):
-        token.append(["Cop", ">"])
+        token.append([">", "Operators"])
         return 1
     elif(req[0]=="<"):
-        token.append(["Cop", "<"])
+        token.append(["<", "Operators"])
         return 1
     elif(req[0]=="="):
-        token.append(["=", "="])
+        token.append(["=", "Operators"])
         return 1
     elif(req[0]=="$"):
         token.append(["$", "$"])
         return 1
     else:
-        token.append(["Variable",req[0]])
+        token.append(["var",req[0]])
         return 1
 
 ```
@@ -118,7 +118,7 @@ print(token)
 
     
      is okie
-    [['if', 'if'], ['Variable', 'a'], ['Cop', '<'], ['Variable', 'b'], ['then', 'then'], ['Variable', 'a'], ['=', '='], ['Variable', 'b'], ['Aop', '+'], ['Numbers', 3], ['$', '$']]
+    [['if', 'keyword'], ['var', 'a'], ['<', 'Operators'], ['var', 'b'], ['then', 'keyword'], ['var', 'a'], ['=', 'Operators'], ['var', 'b'], ['+', 'Operators'], ['num', 3], ['$', '$']]
     
 
 <h3> work with file ... </h3>
