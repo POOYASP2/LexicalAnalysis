@@ -14,7 +14,7 @@ token = []
 ```
 
     Please Enter a String The Last Char is $ 
-    if a < b then a = b + 3 $
+    if a < b then a = b + 33 $
     
 
 <h3> remove space and convert string to array </h3>
