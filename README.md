@@ -3,7 +3,7 @@
     <h3> if a < b then a = b + 3 $ </h3>
     
 <h1> Output Example </h1>
-    <h3> [['if', 'if'], ['Variable', 'a'], ['Cop', '>'], ['Variable', 'b'], ['then', 'then'], ['Variable', 'a'], ['=', '='], ['Numbers', 23], ['Aop', '+'], ['Numbers', 3], ['$', '$']] </h3>
+    <h3>[['if', 'keyword'], ['var', 'a'], ['<', 'Operators'], ['var', 'b'], ['then', 'keyword'], ['var', 'a'], ['=', 'Operators'], ['var', 'b'], ['+', 'Operators'], ['num', 3], ['$', '$']] </h3>
 
 
 ```python
