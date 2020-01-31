@@ -1,9 +1,9 @@
 <h1>Lexical Analysis    تحلیلگر نحوی</h1>
 <h1> Input Example </h1>
-    <h3> if a < b then a = b + 3 $ </h3>
+    <h3> if a < b then a = b + 33 $ </h3>
     
 <h1> Output Example </h1>
-    <h3>[['if', 'keyword'], ['var', 'a'], ['<', 'Operators'], ['var', 'b'], ['then', 'keyword'], ['var', 'a'], ['=', 'Operators'], ['var', 'b'], ['+', 'Operators'], ['num', 3], ['$', '$']] </h3>
+    <h3>[['if', 'keyword'], ['var', 'a'], ['<', 'Operators'], ['var', 'b'], ['then', 'keyword'], ['var', 'a'], ['=', 'Operators'], ['var', 'b'], ['+', 'Operators'], ['num', 33], ['$', '$']] </h3>
 
 
 ```python
@@ -24,7 +24,7 @@ token = []
 print(req)
 ```
 
-    ['i', 'f', 'a', '<', 'b', 't', 'h', 'e', 'n', 'a', '=', 'b', '+', '3', '$']
+    ['i', 'f', 'a', '<', 'b', 't', 'h', 'e', 'n', 'a', '=', 'b', '+', '3','3', '$']
     
 
 <h3> identify numbers and convert to int </h3>
@@ -53,7 +53,7 @@ def digit(req):
 print(digit(req))
 ```
 
-    ['i', 'f', 'a', '<', 'b', 't', 'h', 'e', 'n', 'a', '=', 'b', '+', 3, '$']
+    ['i', 'f', 'a', '<', 'b', 't', 'h', 'e', 'n', 'a', '=', 'b', '+', 33, '$']
     
 
 <h3>dfa for identify tokens<h3>
