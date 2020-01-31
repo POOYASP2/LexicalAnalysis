@@ -27,31 +27,31 @@ def dfa(req):
         token.append(["num", req[0]])
         return 1
     elif(req[0]=="i" and req[1]=="f"):
-        token.append(["if","if"])
+        token.append(["if","keyword"])
         return 2
     elif(req[0]=="w" and req[1]=="h" and req[2]=="i" and req[3]=="l" and req[4]=="e"):
-        token.append(["while","while"])
+        token.append(["while","keyword"])
         return 5
     elif(req[0]=="e" and req[1]=="l" and req[2]=="s" and req[3]=="e"):
-        token.append(["else","else"])
+        token.append(["else","keyword"])
         return 4
     elif(req[0]=="t" and req[1]=="h" and req[2]=="e" and req[3]=="n"):
-        token.append(["then","then"])
+        token.append(["then","keyword"])
         return 4
     elif(req[0]=="*"):
-        token.append(["*", "*"])
+        token.append(["*", "Operators"])
         return 1
     elif(req[0]=="+"):
-        token.append(["+", "+"])
+        token.append(["+", "Operators"])
         return 1
     elif(req[0]==">"):
-        token.append([">", ">"])
+        token.append([">", "Operators"])
         return 1
     elif(req[0]=="<"):
-        token.append(["<", "<"])
+        token.append(["<", "Operators"])
         return 1
     elif(req[0]=="="):
-        token.append(["=", "="])
+        token.append(["=", "Operators"])
         return 1
     elif(req[0]=="$"):
         token.append(["$", "$"])
