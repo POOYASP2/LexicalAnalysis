@@ -1,4 +1,4 @@
-<h1>Lexical Analysis    تحلیلگر نحوی</h1>
+<h1>Lexical Analysis    </h1>
 <h1> Input Example </h1>
     <h3> if a < b then a = b + 33 $ </h3>
     
